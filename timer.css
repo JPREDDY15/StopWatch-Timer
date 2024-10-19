@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('images/saira-ahmed-UMo01PKPU9o-unsplash.jpg') no-repeat center center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#stopwatch {
+    position: relative; 
+    padding: 200px; 
+    border: 3px solid yellowgreen;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+#stopwatch::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+    z-index: -1; 
+}
+#qote {
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    color: white; 
+    margin-bottom: 10px;
+    text-align: center;
+    color: yellowgreen; 
+    text-decoration: underline;
+}
+
+#time {
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    margin-bottom: 20px; 
+    text-align: center; 
+    color: yellowgreen;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons img {
+    width: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.buttons img:hover {
+    transform: scale(1.1);
+}
+
+.left-bar {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+
+.left-bar img {
+    width: 50px;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.left-bar img:hover {
+    opacity: 0.8;
+}
